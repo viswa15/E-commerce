@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <Layout title={"Login - Ecommerce App"}>
-      <div className="form-container">
+      <div className="form-container" style={{minHeight : "90vh"}}>
         <form onSubmit={handleSubmit}>
           <h4 className='title'>LOGIN FORM</h4>
           <div className="mb-3">
@@ -64,7 +64,7 @@ const Login = () => {
           </div>  
 
           <div className='mb-3'>
-          <button type="button" className="btn btn-primary" onClick={()=>{navigate('/forgot-password')}}>
+          <button type="button" className="btn forgot-btn" onClick={()=>{navigate('/forgot-password')}}>
             Forgot Password
           </button> 
           </div> 

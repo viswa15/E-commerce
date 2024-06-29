@@ -19,8 +19,10 @@ const Layout = ({children,title,description,keywords,author}) => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Header />
-      <main style={{ minHeight: "74vh" }}>{children}</main>
+      <main style={{ minHeight: "70vh" }}>
       <ToastContainer />
+        {children}
+        </main>
       <Footer />
     </div>
   )

@@ -20,12 +20,23 @@ import Orders from './pages/User/Orders';
 import Profile from './pages/User/Profile';
 import Products from './pages/Admin/Products';
 import UpdateProduct from './pages/Admin/UpdateProduct';
+import Search from './pages/Search';
+import ProductDetails from './pages/ProductDetails';
+import CategoryProduct from './pages/CategoryProduct';
+import Categories from './pages/Categories';
+import CartPage from './pages/CartPage';
+import AdminOrder from './pages/Admin/AdminOrder';
 
 function App() {
   return (
     <>
     <Routes>
       <Route exact path='/' element={<Homepage/>} />
+      <Route exact path='/product/:slug' element={<ProductDetails/>} />
+      <Route exact path='/categories' element={<Categories/>} />
+      <Route exact path='/cart' element={<CartPage/>} />
+      <Route exact path='/category/:slug' element={<CategoryProduct/>} />
+      <Route exact path='/search' element={<Search/>} />
       <Route path="/dashboard" element={<PrivateRoute/>}>
         <Route exact path="user" element={<Dashboard/>} />
         <Route exact path="user/orders" element={<Orders/>} />
@@ -38,6 +49,7 @@ function App() {
         <Route exact path="admin/product/:slug" element={<UpdateProduct/>} />
         <Route exact path="admin/products" element={<Products/>} />
         <Route exact path="admin/users" element={<Users/>} />
+        <Route exact path="admin/orders" element={<AdminOrder/>} />
       </Route>
       <Route exact path='/register' element={<Register/>} />
       <Route exact path='/forgot-password' element={<ForgotPassword/>} />
